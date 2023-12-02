@@ -19,6 +19,7 @@ logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
 
+
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -319,9 +320,7 @@ async def start(client, message):
             )
             filesarr.append(msg)
         await k.edit_text("<b>File Deleted!</b>")
-        return  
-        
-    # chat_id = None  
+        return   
     
     elif data.startswith("files"):
         user = message.from_user.id
@@ -329,6 +328,7 @@ async def start(client, message):
             await message.reply_text(text="<b>Link Expired, Search Again in Group!</b>")
         else:
             chat_id = temp.SHORT.get(user)
+        chat_id=message.from_user.id
         settings = await get_settings(chat_id)
         if settings['is_shortlink'] and user not in PREMIUM_USER:
             files_ = await get_file_details(file_id)
