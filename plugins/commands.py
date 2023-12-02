@@ -319,8 +319,10 @@ async def start(client, message):
             )
             filesarr.append(msg)
         await k.edit_text("<b>File Deleted!</b>")
-        return    
+        return  
         
+    chat_id = None  
+    
     elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
