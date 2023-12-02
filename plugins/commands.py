@@ -226,6 +226,9 @@ async def start(client, message):
                 text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
             )
+    
+    chat_id = None  
+
     if data.startswith("sendfiles"):
         chat_id = int("-" + file_id.split("-")[1])
         userid = message.from_user.id if message.from_user else None
@@ -320,9 +323,7 @@ async def start(client, message):
             filesarr.append(msg)
         await k.edit_text("<b>File Deleted!</b>")
         return  
-        
-    chat_id = None  
-    
+            
     elif data.startswith("files"):
         user = message.from_user.id
         if temp.SHORT.get(user)==None:
