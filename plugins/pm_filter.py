@@ -1575,7 +1575,7 @@ async def auto_filter(client, msg, spoll=False):
                     continue
                 else:
                     search = search + x + " "
-            search = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|gib)(\sme)?)|movie(s)?|new|latest|web\sseries|download|dubbed|link|film|movie|with\ssubtitle(s)?)", "", search, flags=re.IGNORECASE)
+            search = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|gib)(\sme)?)|movie(s)?|new|latest|web\sseries|link|film|movie|with\ssubtitle(s)?)", "", search, flags=re.IGNORECASE)
             search = re.sub(r"\s+", " ", search).strip()
             search = search.replace("-", " ")
             search = search.replace(":", "")
