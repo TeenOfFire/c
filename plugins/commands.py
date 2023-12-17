@@ -61,7 +61,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🏮Main Channel ⟨Click Here⟩🏮", url=invite_link.invite_link
+                    "🧤 Click Here To Join 🧤", url=invite_link.invite_link
                 )
             ]
         ]
