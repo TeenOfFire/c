@@ -49,7 +49,7 @@ async def pm_text(bot, message):
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
          text=f"<b>🌟 Click Here For Any Movie, Series, Anime & More!!!👇 \n\n🌟 किसी भी मूवी, सीरीज, एनीमे और अधिक के लिए यहां क्लिक करें!!!👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎬 Click Here 🧤", url=f"https://telegram.me/+4KrMei8Ia4c4YzE1")]])
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎬 Click Here 🧤", url=f"https://telegram.me/heroflixofficial")]])
     )
 
 
@@ -128,16 +128,16 @@ async def next_page(bot, query):
                 off_set = offset - 10
             if n_offset == 0:
                 btn.append(
-                    [InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
+                    [InlineKeyboardButton("❮ Back", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
                 )
             elif off_set is None:
-                btn.append([InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton(" NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+                btn.append([InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("Next ➥", callback_data=f"next_{req}_{key}_{n_offset}")])
             else:
                 btn.append(
                     [
-                        InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
+                        InlineKeyboardButton("❮ Back", callback_data=f"next_{req}_{key}_{off_set}"),
                         InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
-                        InlineKeyboardButton(" NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
+                        InlineKeyboardButton("Next ➥", callback_data=f"next_{req}_{key}_{n_offset}")
                     ],
                 )
         else:
@@ -149,16 +149,16 @@ async def next_page(bot, query):
                 off_set = offset - int(MAX_B_TN)
             if n_offset == 0:
                 btn.append(
-                    [InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages")]
+                    [InlineKeyboardButton("❮ Back", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages")]
                 )
             elif off_set is None:
-                btn.append([InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"), InlineKeyboardButton(" NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+                btn.append([InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"), InlineKeyboardButton("Next ➥", callback_data=f"next_{req}_{key}_{n_offset}")])
             else:
                 btn.append(
                     [
-                        InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
+                        InlineKeyboardButton("❮ Back", callback_data=f"next_{req}_{key}_{off_set}"),
                         InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"),
-                        InlineKeyboardButton(" NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
+                        InlineKeyboardButton("Next ➥", callback_data=f"next_{req}_{key}_{n_offset}")
                     ],
                 )
     except KeyError:
@@ -171,16 +171,16 @@ async def next_page(bot, query):
             off_set = offset - 10
         if n_offset == 0:
             btn.append(
-                [InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
+                [InlineKeyboardButton("❮ Back", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
             )
         elif off_set is None:
-            btn.append([InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton(" NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+            btn.append([InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("Next ➥", callback_data=f"next_{req}_{key}_{n_offset}")])
         else:
             btn.append(
                 [
-                    InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
+                    InlineKeyboardButton("❮ Back", callback_data=f"next_{req}_{key}_{off_set}"),
                     InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
-                    InlineKeyboardButton(" NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
+                    InlineKeyboardButton("Next ➥", callback_data=f"next_{req}_{key}_{n_offset}")
                 ],
             )
     # if ENABLE_SHORTLINK == True:
@@ -194,12 +194,12 @@ async def next_page(bot, query):
     #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
     # ])
     if settings["button"]:
-        cap = f"<b>🔆 Results For ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
+        cap = f"<b>🔆 Search Results ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
     else:
         # cap = f"<b>Hᴇʏ {query.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-        cap = f"<b>🔆 Results For ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
+        cap = f"<b>🔆 Search Results ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
         for file in files:
-            cap += f"<b>📙 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
+            cap += f"<b>📗 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] - {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
     try:
         await query.message.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
@@ -372,17 +372,17 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         try:
             if settings['max_btn']:
                 btn.append(
-                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text=" NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+                    [InlineKeyboardButton("🔅 Page", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="Next ➥",callback_data=f"next_{req}_{key}_{offset}")]
                 )
     
             else:
                 btn.append(
-                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text=" NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+                    [InlineKeyboardButton("🔅 Page", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="Next ➥",callback_data=f"next_{req}_{key}_{offset}")]
                 )
         except KeyError:
             await save_group_settings(query.message.chat.id, 'max_btn', True)
             btn.append(
-                [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text=" NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+                [InlineKeyboardButton("🔅 Page", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="Next ➥",callback_data=f"next_{req}_{key}_{offset}")]
             )
     else:
         btn.append(
@@ -1566,7 +1566,7 @@ async def auto_filter(client, msg, spoll=False):
             search = search.lower()
             find = search.split(" ")
             search = ""
-            removes = ["in", "series", "full", "horror", "thriller", "webseries", "hd", "hollywood", "and", "&", "session", "bollywood", "dub", "mystery", "anime", "file", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+            removes = ["in", "series", "full movie", "horror", "4k", "webseries", "hd", "hollywood", "and", "&", "session", "bollywood", "dub", "mystery", "anime", "file", "download", "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
             for x in find:
                 # if x == "in" or x == "series" or x == "full" or x == "horror" or x == "thriller" or x == "mystery" or x == "print" or x == "subtitle" or x == "subtitles":
                 #     continue
@@ -1669,16 +1669,16 @@ async def auto_filter(client, msg, spoll=False):
         try:
             if settings['max_btn']:
                 btn.append(
-                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text=" NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+                    [InlineKeyboardButton("🔅 Page", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="Next ➥",callback_data=f"next_{req}_{key}_{offset}")]
                 )
             else:
                 btn.append(
-                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text=" NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+                    [InlineKeyboardButton("🔅 Page", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="Next ➥",callback_data=f"next_{req}_{key}_{offset}")]
                 )
         except KeyError:
             await save_group_settings(message.chat.id, 'max_btn', True)
             btn.append(
-                [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text=" NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+                [InlineKeyboardButton("🔅 Page", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="Next ➥",callback_data=f"next_{req}_{key}_{offset}")]
             )
     else:
         btn.append(
@@ -1723,12 +1723,12 @@ async def auto_filter(client, msg, spoll=False):
     #     )
     # else:
     if settings["button"]:
-        cap = f"<b>🔆 Results For ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
+        cap = f"<b>🔆 Search Results ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
     else:
         # cap = f"<b>Hᴇʏ {message.from_user.mention}, Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search} \n\n</b>"
-        cap = f"<b>🔆 Results For ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
+        cap = f"<b>🔆 Search Results ➠ ‛{search}’👇\n\n<i>🗨 Select A Link & Press Start ↷</i>\n\n</b>"
         for file in files:
-            cap += f"<b>📙 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
+            cap += f"<b>📙 <a href='https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'>[{get_size(file.file_size)}] - {' '.join(filter(lambda x: not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}\n\n</a></b>"
 
     # if imdb and imdb.get('poster'):
     #     try:
@@ -1746,7 +1746,6 @@ async def auto_filter(client, msg, spoll=False):
     #     except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
     #         pic = imdb.get('poster')
     #         poster = pic.replace('.jpg', "._V1_UX360.jpg")
-    #         #m=await message.reply_text("🔎") 
     #         hmm = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
     #         
     #         try:
@@ -1761,7 +1760,6 @@ async def auto_filter(client, msg, spoll=False):
     #             await message.delete()
     #     except Exception as e:
     #         logger.exception(e)
-    #         #m=await message.reply_text("🔎") 
     #         fek = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn))
     #         
     #         try:
@@ -1798,7 +1796,7 @@ async def advantage_spell_chok(client, msg):
     settings = await get_settings(msg.chat.id)
     find = mv_rqst.split(" ")
     query = ""
-    removes = ["in", "series", "download", "full", "horror", "hd", "thriller", "and", "&", "hollywood", "session", "bollywood", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
+    removes = ["in", "series", "download", "full movie", "horror", "hd", "4k", "and", "&", "hollywood", "session", "bollywood", "dub", "webseries", "mystery", "anime", "file" "movie", "film", "netflix", "episode", "dubbed", "link", "subtitles"]
     for x in find:
         if x in removes:
             continue
@@ -1856,7 +1854,7 @@ async def advantage_spell_chok(client, msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="×××× ⟨ Close ⟩ ××××", callback_data='close_data')])
-    k = await msg.reply("<b>❗Enter Correct Name👇</b> \n<b>❗सही नाम दर्ज करें👇</b>",
+    k = await msg.reply("<b>❗Type Correct Name👇</b> \n<b>❗सही नाम टाइप करें👇</b>",
                      reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(60)
     await k.delete()
